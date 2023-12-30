@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{58525E78-B06A-4789-9B67-6193BCF357EB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Foutball_Tournament</RootNamespace>
+    <AssemblyName>Foutball Tournament</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddTeamsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTeamsForm.Designer.cs">
+      <DependentUpon>AddTeamsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTournamentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTournamentForm.Designer.cs">
+      <DependentUpon>AddTournamentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditMatchesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditMatchesForm.Designer.cs">
+      <DependentUpon>EditMatchesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Match.cs" />
+    <Compile Include="Entities\Team.cs" />
+    <Compile Include="Entities\Tournament.cs" />
+    <Compile Include="Entities\TournamentManager.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TournamentDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TournamentDetailForm.Designer.cs">
+      <DependentUpon>TournamentDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TournamentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TournamentsForm.Designer.cs">
+      <DependentUpon>TournamentsForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddTeamsForm.resx">
+      <DependentUpon>AddTeamsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTournamentForm.resx">
+      <DependentUpon>AddTournamentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditMatchesForm.resx">
+      <DependentUpon>EditMatchesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TournamentDetailForm.resx">
+      <DependentUpon>TournamentDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TournamentsForm.resx">
+      <DependentUpon>TournamentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\MainBg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="File\File.xml" />
+    <Content Include="icon.ico" />
+    <Content Include="Image\icon.ico" />
+    <None Include="Image\TournamentBg.jpg" />
+    <None Include="Image\TournamentBgVertical.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
